@@ -1,16 +1,17 @@
 
-describe('TUTBY homepage todo list',() => {
+describe('TUTBY homepage todo list', function() {
 browser.waitForAngularEnabled(false);
 var search = element(by.id('reg_submit'));
 
-beforeEach( async () =>  {
+beforeEach(function() {
 browser.get('https://profile.tut.by/register.html');
 });
-  it('TimeFunc', async () =>   { 
-await waitdispl(search);  
+  it('TimeFunc', function() {   
+	browser.wait(function(search){
+		browser.element(search).isDisplayed();
+}, 15000);
   });
 });
 
-public static async waitdispl (webElement:ElementFinder){
-	await browser.wait(ExpectedConditions.visibilityOf(webElement),15000);
-}
+
+
