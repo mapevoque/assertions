@@ -37,4 +37,45 @@ describe("description", function() {
 	expect(array3[1]).toEqual(array4[1]);
   });
   
+      it("toBeLessThan", function() {
+		  var a1 = 5;
+		  var a2 = 6;
+		  console.log('Шестой тест');
+      expect(a1 + a2).toBeLessThan(20);
+  });
+  
+        it("toBeGreaterThan", function() {
+		  var a3 = 10;
+		  var a4 = 11;
+		  console.log('седьмой тест');
+        expect(a3 + a4).toBeGreaterThan(20);
+  });
+  
+        it("toMatch", function() {
+			str111 = 'Привет Макс';
+			console.log('восьмой тест');
+        expect(str111).toBeDefined();
+  });
+  
+        it("toBeNull", function() {
+			nullik = null;
+			console.log('девятый тест');
+            expect(nullik).toBeNull();
+
+  });
+  
+        it("not.toBe", function() {
+			first = { 
+			a: 10,
+			b: 11
+			}
+			second = {
+			a: 10,
+            b: 11			
+			}
+			console.log('десятый тест');
+			expect(first).not.toBe(second);
+
+  });
+  
 });
